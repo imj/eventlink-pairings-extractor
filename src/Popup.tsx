@@ -1,11 +1,15 @@
+declare const browser: typeof chrome;
+
+const browserAPI = typeof browser !== 'undefined' ? browser : chrome;
+
 export default function Popup() {
   async function handleExtractClick() {
-    const [tab] = await chrome.tabs.query({
+    const [tab] = await browserAPI.tabs.query({
       active: true,
       currentWindow: true,
     });
     if (tab.id) {
-      chrome.scripting.executeScript({
+      browserAPI.scripting.executeScript({
         target: { tabId: tab.id },
         files: ['content.js'],
       });

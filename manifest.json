@@ -22,7 +22,8 @@
   },
   "browser_specific_settings": {
     "gecko": {
-      "id": "eventlink-pairings-extractor@example.com"
+      "id": "eventlink-pairings-extractor@example.com",
+      "strict_min_version": "109.0"
     }
   },
   "web_accessible_resources": [
