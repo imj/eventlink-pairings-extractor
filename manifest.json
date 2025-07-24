@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "Eventlink Pairings Extractor",
+  "description": "Estrai e copia i risultati delle pairings da eventlink.wizards.com",
+  "version": "1.0.0",
+  "permissions": ["scripting", "activeTab", "clipboardWrite"],
+  "host_permissions": [
+    "https://eventlink.wizards.com/*",
+    "http://localhost:5173/*"
+  ],
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": {
+      "16": "icon.png"
+    }
+  },
+  "icons": {
+    "16": "icon.png",
+    "32": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "eventlink-pairings-extractor@example.com"
+    }
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["content.js"],
+      "matches": ["https://eventlink.wizards.com/*"]
+    }
+  ]
+}
